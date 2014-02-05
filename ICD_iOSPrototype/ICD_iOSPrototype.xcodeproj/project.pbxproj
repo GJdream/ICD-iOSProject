@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		83861A06186F546C007AF963 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 83861A05186F546C007AF963 /* Category.m */; };
 		83861A09186FA0CF007AF963 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83861A08186FA0CE007AF963 /* DetailViewController.m */; };
 		8386501C186A826300B19930 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8386501B186A826300B19930 /* Parser.m */; };
 		8386501F186A88AA00B19930 /* iOSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8386501E186A88AA00B19930 /* iOSRequest.m */; };
@@ -17,10 +16,8 @@
 		8387972D186BC9290080EFC6 /* checkBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8387972C186BC9290080EFC6 /* checkBox.png */; };
 		8387972F186BC9370080EFC6 /* checkBoxMarked.png in Resources */ = {isa = PBXBuildFile; fileRef = 8387972E186BC9370080EFC6 /* checkBoxMarked.png */; };
 		83AFDEF3186BE88500B05AA2 /* NSString+WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AFDEF2186BE88500B05AA2 /* NSString+WebService.m */; };
-		83B84C90186E28D400304551 /* BaseElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B84C8F186E28D400304551 /* BaseElement.m */; };
-		83B84C93186E2B1800304551 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B84C92186E2B1700304551 /* Block.m */; };
+		83B84C90186E28D400304551 /* CodeICD.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B84C8F186E28D400304551 /* CodeICD.m */; };
 		83B8D8B0186B765400D37533 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D8AF186B765400D37533 /* SettingsViewController.m */; };
-		83C08456186A8084005C41B5 /* Chapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C08455186A8084005C41B5 /* Chapter.m */; };
 		83C85917186D059A00BC8879 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C85916186D059A00BC8879 /* Toast+UIView.m */; };
 		83F01819186A16F50067B8A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F01818186A16F50067B8A9 /* UIKit.framework */; };
 		83F0181B186A16F50067B8A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F0181A186A16F50067B8A9 /* Foundation.framework */; };
@@ -45,8 +42,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		83861A04186F546C007AF963 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
-		83861A05186F546C007AF963 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		83861A07186FA0CE007AF963 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		83861A08186FA0CE007AF963 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		8386501A186A826300B19930 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
@@ -63,14 +58,10 @@
 		8387972E186BC9370080EFC6 /* checkBoxMarked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkBoxMarked.png; path = ../checkBoxMarked.png; sourceTree = "<group>"; };
 		83AFDEF1186BE87500B05AA2 /* NSString+WebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WebService.h"; sourceTree = "<group>"; };
 		83AFDEF2186BE88500B05AA2 /* NSString+WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WebService.m"; sourceTree = "<group>"; };
-		83B84C8E186E28D400304551 /* BaseElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseElement.h; sourceTree = "<group>"; };
-		83B84C8F186E28D400304551 /* BaseElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseElement.m; sourceTree = "<group>"; };
-		83B84C91186E2B1700304551 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
-		83B84C92186E2B1700304551 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
+		83B84C8E186E28D400304551 /* CodeICD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeICD.h; sourceTree = "<group>"; };
+		83B84C8F186E28D400304551 /* CodeICD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeICD.m; sourceTree = "<group>"; };
 		83B8D8AE186B765400D37533 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		83B8D8AF186B765400D37533 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		83C08454186A8084005C41B5 /* Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chapter.h; sourceTree = "<group>"; };
-		83C08455186A8084005C41B5 /* Chapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chapter.m; sourceTree = "<group>"; };
 		83C85915186D058000BC8879 /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
 		83C85916186D059A00BC8879 /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
 		83F01815186A16F50067B8A9 /* ICD_iOSPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICD_iOSPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,18 +131,12 @@
 		83B95DC7186B9F1300E80083 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				83C08454186A8084005C41B5 /* Chapter.h */,
-				83C08455186A8084005C41B5 /* Chapter.m */,
 				8386501A186A826300B19930 /* Parser.h */,
 				8386501B186A826300B19930 /* Parser.m */,
 				8386501D186A88AA00B19930 /* iOSRequest.h */,
 				8386501E186A88AA00B19930 /* iOSRequest.m */,
-				83B84C8E186E28D400304551 /* BaseElement.h */,
-				83B84C8F186E28D400304551 /* BaseElement.m */,
-				83B84C91186E2B1700304551 /* Block.h */,
-				83B84C92186E2B1700304551 /* Block.m */,
-				83861A04186F546C007AF963 /* Category.h */,
-				83861A05186F546C007AF963 /* Category.m */,
+				83B84C8E186E28D400304551 /* CodeICD.h */,
+				83B84C8F186E28D400304551 /* CodeICD.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -322,7 +307,6 @@
 				83F01835186A16F50067B8A9 /* MainViewController.m in Sources */,
 				83F0184F186A1B650067B8A9 /* SideBarViewController.m in Sources */,
 				83F01853186A1ECC0067B8A9 /* SWRevealViewController.m in Sources */,
-				83C08456186A8084005C41B5 /* Chapter.m in Sources */,
 				8386501C186A826300B19930 /* Parser.m in Sources */,
 				8386501F186A88AA00B19930 /* iOSRequest.m in Sources */,
 				83B8D8B0186B765400D37533 /* SettingsViewController.m in Sources */,
@@ -331,9 +315,7 @@
 				8386D407186B9A5400CC7380 /* HistoryViewController.m in Sources */,
 				83AFDEF3186BE88500B05AA2 /* NSString+WebService.m in Sources */,
 				83C85917186D059A00BC8879 /* Toast+UIView.m in Sources */,
-				83B84C90186E28D400304551 /* BaseElement.m in Sources */,
-				83B84C93186E2B1800304551 /* Block.m in Sources */,
-				83861A06186F546C007AF963 /* Category.m in Sources */,
+				83B84C90186E28D400304551 /* CodeICD.m in Sources */,
 				83861A09186FA0CF007AF963 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -34,7 +34,7 @@
 
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:fullPath]
                                                   cachePolicy:NSURLCacheStorageAllowedInMemoryOnly
-                                              timeoutInterval:10];
+                                              timeoutInterval:100];
     
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:backgroundQueue

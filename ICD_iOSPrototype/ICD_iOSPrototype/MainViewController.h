@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Chapter.h"
+#import "CodeICD.h"
 #import "MainAppDelegate.h"
 
 @interface MainViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
@@ -21,8 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (nonatomic, retain) MainAppDelegate *app;
 
-@property (nonatomic, retain) Chapter *theList;
-@property (assign) NSInteger chap;
+@property (nonatomic, retain) CodeICD *theList;
 
 @property (nonatomic,strong) NSArray *tableData;
 @property (assign) NSMutableArray *array;

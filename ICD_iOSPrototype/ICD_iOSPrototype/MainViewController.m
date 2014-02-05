@@ -25,7 +25,7 @@
 
 
 @synthesize theList, tableData, array, start, timeLabel, timeInterval,table;
-@synthesize app, chap, show, titleCK,definitionCK,noteCK,inclusionCK,exclusionCK,codinghintCK;
+@synthesize app,show, titleCK,definitionCK,noteCK,inclusionCK,exclusionCK,codinghintCK;
 @synthesize titleLabel,definitionLabel,noteLabel,inclusionLabel,exclusionLabel,codinghintLabel;
 @synthesize titleBtn,definitionBtn,nodeBtn,inclusionBtn,exclusionBtn,codinghintBnt;
 
@@ -64,9 +64,9 @@
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         
         NSIndexPath *indexPath = [self.table indexPathForSelectedRow];
-        BaseElement *b = app.listArray[indexPath.row];
+        CodeICD *b = app.listArray[indexPath.row];
         DetailViewController *d = [segue destinationViewController];
-        d.loadHtml = b.htmlResult;
+        d.loadHtml = b.HtmlResult;
         d.title = [[[self.table cellForRowAtIndexPath:indexPath] textLabel ]text];
     }
 }
@@ -115,8 +115,6 @@
 {
     
     [self startFetching];
-    chap = [self.addressField.text integerValue];
-    chap--;
     [self fetchAddress:self.addressField.text];
 }
 
@@ -138,25 +136,29 @@
     NSTimeInterval time = [self.start timeIntervalSinceNow];
     float a = fabsf(time);
     timeLabel.text = [NSString stringWithFormat:@"%@%.2f%@",@"Time elapsed: ",a , @" seconds"];
-    NSMutableArray *are = [[NSMutableArray alloc] init];
+    NSMutableArray *tData = [[NSMutableArray alloc] init];
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *add = [defaults stringForKey:@"addressURL"];
+    
+ 
     NSString *inToast=@"";
     
-        for (BaseElement *object in [app.listArray copy] ){
+        for (CodeICD *object in [app.listArray copy] ){
             
-            if([add rangeOfString:@"blocks"].location ==NSNotFound){
+            if([object.Type isEqualToString:@"CH"]){
                 inToast=@"Chapter ";
-                [are addObject:[NSString stringWithFormat:@"%@%@",inToast,object.code]];
-            }else {
-                  inToast=@"Block ";
-                 [are addObject:[NSString stringWithFormat:@"%@%@",inToast,object.code]];
+                [tData addObject:[NSString stringWithFormat:@"%@%@",inToast,object.Code]];
+            }else if([object.Type isEqualToString:@"BL"]){
+                  inToast=@"Block ";	
+                 [tData addObject:[NSString stringWithFormat:@"%@%@",inToast,object.Code]];
+            }
+            else if([object.Type isEqualToString:@"CA"]){
+                inToast=@"Category ";
+                [tData addObject:[NSString stringWithFormat:@"%@%@",inToast,object.Code]];
             }
         
        
     }
-    tableData = are;
+    tableData = tData;
     
     [table reloadData];
     
@@ -164,17 +166,7 @@
      
     NSLog(@"Done Fetching!");
 
-   
-     
-//    @try {
-//      theList = [app.listArray objectAtIndex:0];
-//    }
-//    @catch (NSException *exception) {
-//        UIAlertView * newAlert=[[UIAlertView alloc] initWithTitle:@"Warning" message:@"Chapters range 1-22" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:@"Cancel", nil];
-//        [newAlert show];
-//
-//    }
-   [self.view makeToast:[NSString stringWithFormat:@"%@%i",@"Returned Codes: ",[app.listArray count]]];
+   [self.view makeToast:[NSString stringWithFormat:@"%@%i",@"Returned CodesICD: ",[app.listArray count]]];
     [self.loading stopAnimating];
     self.fetchButton.enabled = YES;
 }

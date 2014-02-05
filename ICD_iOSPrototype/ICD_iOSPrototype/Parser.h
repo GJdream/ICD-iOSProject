@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Category.h"
-#import "Chapter.h"
 #import "MainAppDelegate.h"
+#import "CodeICD.h"
 
 @interface Parser : NSObject <NSXMLParserDelegate>{
     MainAppDelegate *app;
-    BaseElement *theList;
+    CodeICD *codeICD;
     NSMutableString *currentElementValue;
 }
 

@@ -23,36 +23,17 @@
 
 -(void) parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{
     
-    if ([elementName isEqualToString:@"ArrayOfCategory"]) {
+    if ([elementName isEqualToString:@"ArrayOfCodeICD"]) {
         
         app.listArray = [[NSMutableArray alloc] init];
     }
-    else if([elementName isEqualToString:@"Category" ] ){
+    else if([elementName isEqualToString:@"CodeICD" ] ){
         
-        theList = [[BaseElement alloc] init];
+        codeICD = [[CodeICD alloc] init];
         
               
     }
-    else if ([elementName isEqualToString:@"ArrayOfChapter"]) {
-        
-        app.listArray = [[NSMutableArray alloc] init];
-    }
-    else if([elementName isEqualToString:@"Chapter" ] ){
-        
-        theList = [[Chapter alloc] init];
-        
-        
-    }
-    else if ([elementName isEqualToString:@"ArrayOfBlock"]) {
-        
-        app.listArray = [[NSMutableArray alloc] init];
-    }
-    else if([elementName isEqualToString:@"Block" ] ){
-        
-        theList = [[Chapter alloc] init];
-        
-        
-    }
+    
     
 }
 
@@ -67,42 +48,21 @@
 
 -(void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
     
-    if ([elementName isEqualToString:@"ArrayOfCategory"]) {
+    if ([elementName isEqualToString:@"ArrayOfCodeICD"]) {
         return;
     }
     
     
-    if ([elementName isEqualToString:@"Category"]) {
-        [app.listArray addObject:theList];
+    if ([elementName isEqualToString:@"CodeICD"]) {
+        [app.listArray addObject:codeICD];
         
-        theList = nil;
+        codeICD = nil;
         
-    }
-    if ([elementName isEqualToString:@"ArrayOfChapter"]) {
-        return;
     }
     
-    
-    if ([elementName isEqualToString:@"Chapter"]) {
-        [app.listArray addObject:theList];
-        
-        theList = nil;
-        
-    }
-    if ([elementName isEqualToString:@"ArrayOfBlock"]) {
-        return;
-    }
-    
-    
-    if ([elementName isEqualToString:@"Block"]) {
-        [app.listArray addObject:theList];
-        
-        theList = nil;
-        
-    }
 
     else
-        [theList setValue:currentElementValue forKey:elementName];
+        [codeICD setValue:currentElementValue forKey:elementName];
     
     currentElementValue = nil;
     
